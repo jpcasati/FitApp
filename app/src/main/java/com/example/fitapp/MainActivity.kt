@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             listaAtividades = atividadeDAO!!.listarPorTipo(tipo)
         }
 
-        val adp = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaAtividades)
+        val adp = ListaAdapter(listaAtividades)
 
         lstAtividades.adapter = adp
     }
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             listaAtividades = atividadeDAO!!.listar()
         }
 
-        val adp = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaAtividades)
+        val adp = ListaAdapter(listaAtividades)
 
         lstAtividades.adapter = adp
     }
